@@ -377,6 +377,7 @@ use riscv::register::{mcause as xcause, mtvec as xtvec, mtvec::TrapMode as xTrap
 #[cfg(all(not(feature = "single-hart"), not(feature = "s-mode")))]
 use riscv::register::mhartid;
 
+#[cfg(feature = "convenience-macros")]
 pub use riscv_rt_macros::{entry, pre_init};
 
 #[export_name = "error: riscv-rt appears more than once in the dependency graph"]
